@@ -1,113 +1,82 @@
+import SearchForm from "@/components/SearchForm"; // Import the SearchForm component
 import Image from "next/image";
 
 export default function Home() {
+
+  const trending_data = [
+    {
+      id:1,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmWuDDybIEAT7RFXK9MQppjJBSpHoi8rKTQ&s",
+      title: " Dubai",
+      location: " Unaited Arab Emirates",
+      description: "15 Deals "
+    },
+    {
+      id:2,
+      src: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhnNPoR5B5LPXk3KgPHYsUB9GuA5itsIZHQ&s",
+      title: "Korea",
+      location: "Asia ",
+      description: "37 Deals"
+    },
+    {
+      id:3,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5lfzQk7NraNcuS87iT_B2IOjlfFJu4x_sWg&s",
+      title: " India",
+      location: "Asia",
+      description: "40 Deals "
+    },
+    {
+      id:4,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI16m9HE0TyaZRb5nvvoIeyeLZeBjGFATZTQ&s",
+      title: " Palastine",
+      location: " Asia",
+      description: "55 Deals "
+    },
+    {
+      id:5,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR94u0EyhIYQ35WVzV0LSlxZ0Ozv9tMqfzewA&s ",
+      title: " France",
+      location: "Europe ",
+      description: "67 Deals "
+    },
+    {
+      id:6,
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vvYSncbp2TOsX0RtuefRs4Nbq0CgGnejZQ&s",
+      title: " Egypt",
+      location: " Africa",
+      description: " 80 Deals"
+    },
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="bg-[#130894]">
+
+      <section className="max-w-7xl mx-auto p-6">
+        <h2 className="font-bold text-5xl text-white">Find Your Next Stay</h2>
+        <h3 className="text-white py-5 text-xl">Search low prices on hotel, homes and much more...</h3>
+      </section>
+
+      <section className="m-4 mt-0 -mb-14 px-2 lg:px-4">
+        <SearchForm/>
+      </section>
+
+      <section className="mx-auto max-w-7xl mt-10 p-6 bg-white rounded-t-lg">
+        <div className="pt-5">
+          <h3 className="text-xl font-bold">Trending Destination</h3>
+          <p className="font-light">Most popular choices  for travellers from around the world</p>
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className="flex space-x-4 py-5 overflow-x-scroll">
+          {trending_data.map((item) => (
+            <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
+              <img key={item.id} src={item.src} alt="" className="w-80 h-72 object-cover rounded-lg pb-2 " />
+              <p className="font-bold ">{item.title}</p>
+              <p>{item.location}</p>
+              <p className="font-light text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
